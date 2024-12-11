@@ -11,4 +11,9 @@ def create_app():
     app.register_blueprint(main, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/auth")
 
+    # debugging for template paths
+    print("Template search paths: ")
+    for path in app.jinja_loader.searchpath:
+        print(path)
+
     return app
