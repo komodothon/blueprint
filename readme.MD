@@ -4,6 +4,9 @@
 /root/
     /app/
         __init__.py            # Application factory and blueprint registration
+        /templates/                # Global templates (not tied to a specific blueprint)
+            layout.html            # Layout template for all pages
+            error.html             # Error handling template
         /main/                 # Main blueprint folder
             __init__.py        # Initialize 'main' blueprint
             routes.py          # Routes for the 'main' blueprint
@@ -18,14 +21,9 @@
                 login.html     # Login page template
                 register.html  # Register page template
         /static/               # Static files (accessible globally)
-            css/               # CSS files
-                styles.css     # Application styles
-            image/             # Images
-                logo.png       # Logo or other images
-    /migrations/               # Flask-Migrate folder for database migrations
-    /templates/                # Global templates (not tied to a specific blueprint)
-        base.html              # Base template for all pages
-        error.html             # Error handling template
+
+        /migrations/               # Flask-Migrate folder for database migrations
+
     run.py                     # Entry point to start the application
 
 

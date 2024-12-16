@@ -7,4 +7,35 @@
 
 {% block content %}
     <h4>Register page</h4>
+    <div>
+        <form action="{{url_for('auth.register') }}" method="POST">
+            <div>
+                {{ form.hidden_tag() }}
+            </div>
+
+            <div>
+                {{ form.username.label }}
+                {{ form.username() }}
+            </div>
+
+            <div>
+                {{ form.email.label }}
+                {{ form.email() }}
+            </div>
+
+            <div>
+                {{ form.password.label }}
+                {{ form.password() }}
+            </div>
+
+            <div>
+                {{ form.confirm_password.label }}
+                {{ form.confirm_password() }}
+            </div>
+
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
 {% endblock %}
